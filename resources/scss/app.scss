@@ -1,3 +1,58 @@
-@import '~bootstrap/scss/bootstrap';
-@import "partials/header";
-@import "partials/footer";
+@import "~bootstrap/scss/bootstrap";
+@import "./partials/variables";
+
+// Header
+header {
+    border-bottom: solid 1px black;
+    .header-top {
+        background-color: $main_color;
+        padding: 0.2rem 0;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+
+            li {
+                margin-left: 1rem;
+                a {
+                    color: $main_bg_text_color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        .container {
+            display: flex;
+            justify-content: center;
+            .logo {
+                img {
+                    height: 80px;
+                }
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    li {
+                        margin: 0 0.5rem;
+                        a {
+                            text-decoration: none;
+
+                            &.active {
+                                border-bottom: 3px solid $main_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

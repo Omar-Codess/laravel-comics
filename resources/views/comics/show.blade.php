@@ -3,7 +3,7 @@
 @section('content')
     <section>
         <div class="container">
-            <h1>Pagina home</h1>
+            <h2>{{ $singleComic['title'] }}</h2>
         </div>
     </section>
 @endsection
